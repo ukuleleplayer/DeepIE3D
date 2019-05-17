@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      angular_components|scss_builder:
+        enabled: True
+      build_web_compilers|entrypoint:
+        options:
+          compiler: dart2js
+          dart2js_args:
+          - --minify
+          - --lax-runtime-type-to-string
+          - --trust-primitives
+          - --omit-implicit-checks

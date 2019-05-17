@@ -1,0 +1,37 @@
+<div class="grid-container">
+  <div *ngFor="let i of indices" class="mdc-card grid-item">
+    <div>
+      <div id="icons" *ngIf="coreService.advancedMode">
+        <template [ngIf]="coreService.canvasEvolutions[i].isNotEmpty">
+          <material-icon *ngFor="let c of coreService.canvasEvolutions[i]" [icon]="determineIcon(c)">
+          </material-icon>
+        </template>
+      </div>
+      <canvas width="225" height="225"></canvas>
+    </div>
+    <div class="mdc-card__actions">
+      <div class="mdc-card__action-icons">
+        <material-button class="default-cursor" disabled>
+          <span class="canvas-number">{{i+1}}</span>
+        </material-button>
+        <large-canvas-dialog [canvasId]="i"></large-canvas-dialog>
+        <popup-menu [menuGroup]="canvasMenus[i]" title="More options"></popup-menu>
+        <material-button icon (trigger)="keep(i)" *ngIf="coreService.advancedMode" title="Keep model">
+          <material-icon icon="lock"></material-icon>
+        </material-button>
+        <material-button icon (trigger)="coreService.toggleCanvas(i)" *ngIf="!coreService.advancedMode"
+          title="Use model in evolution">
+          <material-icon [icon]="coreService.selectedIcons[i]" [style.color]="coreService.selectedColors[i]">
+          </material-icon>
+        </material-button>
+        <popup-menu *ngIf="coreService.advancedMode" [menuGroup]="crossoverMenus[i]" title="Crossover model">
+        </popup-menu>
+        <material-button *ngIf="coreService.advancedMode" icon (trigger)="mutate(i)" title="Mutate model">
+          <material-icon icon="tune"></material-icon>
+        </material-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-spinner [message]="coreService.message" [isLoading]="coreService.isLoading"></app-spinner>

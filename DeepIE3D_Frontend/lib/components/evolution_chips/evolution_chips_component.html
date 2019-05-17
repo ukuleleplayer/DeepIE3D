@@ -1,0 +1,15 @@
+<material-chips>
+    <template ngFor let-c [ngForOf]="coreService.evolutionChips" let-i="index">
+        <span class="chip">
+            <p class="canvas-id">{{i+1}}</p>
+            <material-chip [hasLeftIcon]="true" (remove)="coreService.removeEvolution(c)" [removable]="true"
+                [itemRenderer]="renderEvolutionChip" [value]="c">
+                <material-icon *ngIf="c.getEvolutionTypeString() == 'Crossover'" left-icon icon="shuffle">
+                </material-icon>
+                <material-icon *ngIf="c.getEvolutionTypeString() == 'Keep'" left-icon icon="lock"></material-icon>
+                <material-icon *ngIf="c.getEvolutionTypeString() == 'Mutate'" left-icon icon="tune"></material-icon>
+                <material-icon *ngIf="c.getEvolutionTypeString() == 'New'" left-icon icon="fiber_new"></material-icon>
+            </material-chip>
+        </span>
+    </template>
+</material-chips>

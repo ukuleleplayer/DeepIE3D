@@ -1,0 +1,158 @@
+<a (click)="isOpen = !isOpen" id="user-guide">Click here to read the user guide</a>
+
+<modal [(visible)]="isOpen">
+    <material-dialog class="hideFooter">
+        <div id="header-segment" header>
+            <h1>User Guide</h1>
+            <material-button id="close" icon (trigger)="isOpen = !isOpen" title="Close popup">
+                <material-icon icon="close"></material-icon>
+            </material-button>
+        </div>
+        <div>
+            <p>This browser-based tool let's you create beautiful 3D models without even modelling them!</p>
+            <p>
+                Whether you need models for concept development, computer games, 3D printing or purely for fun, this
+                will do the trick.
+            </p>
+            <p>
+                In DeepIE3D, there're two ways of reaching your desired 3D model: The regular approach, called "Normal
+                Mode", and the custom approach, called "Advanced Mode".
+            </p>
+            <h3>General Principles</h3>
+            <p>
+                In each iteration of 3D modelling, you're presented with nine 3D models from a certain domain (e.g.
+                planes or chairs).
+                These models are evolved troughout the process - when you're satisfied with one or more of the models,
+                you're done. During the process, you'll always have the following possibilities:
+            </p>
+            <ul class="bullet-less">
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="fullscreen">
+                        </material-icon>
+                        <p>View a large version of a model</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="menu">
+                        </material-icon>
+                        <p>Save a model in various formats (.binvox, .stl, .png)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="toggle_off">
+                        </material-icon>
+                        <p>
+                            Force novelty in models: Widens the distribution of newly created models, resulting in more
+                            different models (experimential feature, turned off for now)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="linear_scale">
+                        </material-icon>
+                        <p>
+                            Adjust the general mutation rate, controlling the magnitude of mutation
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="airplanemode_active">
+                        </material-icon>
+                        <p>
+                            Select planes as 3D model type (will reload site)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="weekend">
+                        </material-icon>
+                        <p>
+                            Select chairs as 3D model type (will reload site)
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+            <p>To advance to the next evolutionary iteration, press the "INITIALIZE EVOLUTION" button.</p>
+            <h3>Normal Mode</h3>
+            <p>
+                This is the default mode. It utilizes the original DeepIE algorithm to evolve chosen models. This
+                involves mutating, combining and generating new models. In this mode, in addition to the general
+                possibilities, you're able to perform the following actions:
+            </p>
+            <ul class="bullet-less">
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="favorite_border">
+                        </material-icon>
+                        <p>Mark a model as a candidate to the DeepIE algorithm</p>
+                    </div>
+                </li>
+            </ul>
+            <h3>Advanced Mode</h3>
+            <p>
+                As the name states, this is the advanced mode as it let's you custimize the next evolutionary iteration
+                completely. Each evolutionary iteration consists of a generation of nine models. How these nine model
+                look is fully based on the evolution they undergo - you decide. In addition to the general
+                possibilities, you're able to perform the following actions:
+            </p>
+            <ul class="bullet-less">
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="lock">
+                        </material-icon>
+                        <p>Mark a model as being kept in its original form in the next evolutionary iteration</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="shuffle">
+                        </material-icon>
+                        <p>Mark a model as being combined with another to-be-chosen model in the next
+                            evolutionary iteration</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-legend">
+                        <material-icon class="icon-description" icon="tune">
+                        </material-icon>
+                        <p>Mark a model as being mutated in the next evolutionary iteration</p>
+                    </div>
+                </li>
+            </ul>
+            <p>
+                To keep track of the next generation of nine models, you'll be able to see the upcoming evolutions to
+                the right - if you dislike one, you can remove it. Additionally, you'll be able to keep track of how
+                a certain model contributes to the next evolutionary iteration by observing the icons in its top left
+                corner.
+            </p>
+            <h3>Further Reading</h3>
+            <p>
+                If you want to read more about the technology, algorithms and such being used in this tool, please refer
+                to the links below:
+            </p>
+            <ul>
+                <li><a href="https://adrianwesth.dk">Master's Thesis about DeepIE3D</a></li>
+                <li><a href="https://arxiv.org/pdf/1801.08230.pdf">Paper about deep interactive evolution</a></li>
+                <li><a href="https://arxiv.org/pdf/1406.2661.pdf">Paper about the original technique used for
+                        artificially generating various artifacts (GAN)</a>
+                </li>
+                <li><a
+                        href="https://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf">Paper
+                        about specifically generating 3D models (3D-GAN)</a></li>
+            </ul>
+            <h3>About the Creators</h3>
+            <p>This is the product of a Master's Thesis from the IT University of Copenhagen. The authors are Adrian
+                Westh and Simon Krabbe Munck. If any questions arise, please reach out to either <a
+                    href="mailto:mail@adrianwesth.dk?Subject=DeepIE3D" target="_blank">Adrian</a> or <a
+                    href="mailto:simonkmunck@gmail.com?Subject=DeepIE3D" target="_blank">Simon</a>
+            </p>
+        </div>
+    </material-dialog>
+</modal>

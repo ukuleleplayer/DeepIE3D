@@ -1,0 +1,25 @@
+material-chips {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: unset;
+}
+
+material-chip {
+    margin-top: 0px;
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+}
+
+.canvas-id {
+    color: #4286f4;
+    font-weight: bold;
+    font-size: large;
+    margin-top: -5px !important;
+    margin-right: 10px !important;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+    margin-block-start: 0;
+}

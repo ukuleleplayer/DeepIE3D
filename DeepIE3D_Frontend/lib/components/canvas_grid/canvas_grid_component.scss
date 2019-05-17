@@ -1,0 +1,47 @@
+@import 'package:angular_components/css/material/material';
+
+.mdc-card {
+  display:flex;
+}
+
+.mdc-card__actions {
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.mdc-card__action-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-number {
+  color: #4286f4;
+  font-weight: bold;
+  font-size: large;
+}
+
+.default-cursor {
+  cursor: default !important;
+}
+
+#icons {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container {
+  padding: 10px;
+  display: grid;
+  grid-gap: 50px 50px;
+  grid-template-columns: auto auto auto;
+  align-content: center;
+  width: 100%;
+}
+
+.grid-item {
+  justify-content: center;
+  text-align: center;
+}

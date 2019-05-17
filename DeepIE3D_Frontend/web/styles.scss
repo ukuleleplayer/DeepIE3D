@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+canvas#renderCanvas:focus {
+    outline-width: 0px;
+}
+
+canvas {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  border: 1px;
+  border-style: solid;
+  cursor: move;
+}
+
+#mobileHide { 
+  display: inline;
+} 
+
+#mobileShow {
+  display: none;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} 
+
+canvas-grid {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+<material-button icon (trigger)="openDialog()" [disabled]="isOpen" title="View large model">
+    <material-icon icon="fullscreen"></material-icon>
+</material-button>
+
+<modal [(visible)]="isOpen">
+    <material-dialog class="hideFooter">
+        <div header>
+            <material-button id="close" icon (trigger)="closeDialog()" title="Close popup">
+                <material-icon icon="close"></material-icon>
+            </material-button>
+        </div>
+        <div class="large-canvas">
+            <canvas id="{{'large-canvas-' + canvasId.toString()}}" width="500" height="500"></canvas>
+        </div>
+    </material-dialog>
+</modal>

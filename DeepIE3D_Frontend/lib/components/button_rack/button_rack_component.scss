@@ -1,0 +1,59 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_slider/mixins';
+
+:host {
+  material-slider {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+#button-rack {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  background-color: ghostwhite;
+}
+
+.rack-element {
+  margin-left: 10px;
+}
+
+#evolve-button {
+  margin-top: 5px;
+  color: white;
+  background: #4286f4;
+  align-self: center;
+}
+
+.button-label {
+  display: flex;
+}
+
+#evolution-chips {
+  margin-top: 10px; 
+  margin-bottom: 20px;
+}
+
+#novelty {
+  margin-top: 5px;
+}
+
+#mutation-rate {
+  display: flex;
+  margin-top: -5px;
+}
+
+#model-type {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: -15px;
+}
+
+.model-type {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}

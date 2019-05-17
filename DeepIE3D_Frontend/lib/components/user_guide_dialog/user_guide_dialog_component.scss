@@ -1,0 +1,32 @@
+#header-segment {
+  display: flex;
+  justify-content: space-between;
+}
+
+#close {
+  margin-top: -13px;
+}
+
+material-dialog {
+  height: 700px;
+  max-height: 700px;
+  width: 600px;
+}
+
+#user-guide {
+  color: #4286f4;
+  cursor: pointer;
+}
+
+.icon-description {
+  margin-top: 7px;
+  margin-right: 2px;
+}
+
+.bullet-less {
+  list-style-type: none;
+}
+
+.icon-legend {
+  display: flex;
+}

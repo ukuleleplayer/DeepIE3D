@@ -1,0 +1,54 @@
+<div id="button-rack">
+  <div class="rack-element">
+    <h2>Welcome to DeepIE3D!</h2>
+    <p>DeepIE3D is short for Deep Interactive Evolutionary 3D Modelling.
+      As the name hints, it is a concept using deep learning combined with evolutionary principles.
+      Please read the user guide to learn more!
+    </p>
+    <user-guide-dialog></user-guide-dialog>
+  </div>
+  <div id="model-type">
+    <material-button icon (trigger)="switchModels()">
+      <span class="model-type" label="Choose plane as 3D model type">
+        <material-icon icon="airplanemode_active" [style.color]="getModelType() == 'Plane' ? '#009688' : 'black'">
+        </material-icon>
+        <p>Planes</p>
+      </span>
+    </material-button>
+    <material-button icon (trigger)="switchModels()">
+      <span class="model-type" label="Choose chair as 3D model type">
+        <material-icon icon="weekend" [style.color]="getModelType() == 'Chair' ? '#009688' : 'black'">
+        </material-icon>
+        <p>Chairs</p>
+      </span>
+    </material-button>
+  </div>
+  <div class="rack-element" title="Toggle advanced evolution mode">
+    <material-toggle [disabled]="false" [(checked)]="coreService.advancedMode" label="Advanced mode">
+    </material-toggle>
+  </div>
+  <div class="rack-element" id="novelty"
+    title="Ensures a wide distribution of models resulting in more different new models">
+    <material-toggle class="disabled" [disabled]="true" [(checked)]="coreService.novelty"
+      label="Force novelty in new models">
+    </material-toggle>
+  </div>
+  <div class="rack-element" id="mutation-rate" title="Adjust mutation rate"
+    [style.margin-bottom]="coreService.advancedMode ? '0px' : '18px'">
+    <p>Mutation rate: {{precisionMutationRate()}}</p>
+    <material-slider [(value)]="mutationRate" [min]="0.00" [step]="0.10" [max]="1.00">
+    </material-slider>
+  </div>
+  <div id="evolution-chips" class="rack-element" *ngIf="coreService.advancedMode">
+    <h3>Next Generation</h3>
+    <evolution-chips></evolution-chips>
+  </div>
+  <div class="button-label rack-element" id="evolve-div">
+    <material-button raised (trigger)="evolve" id="evolve-button" aria-label="Evolve">
+      Initialize Evolution
+    </material-button>
+    <p style="color:#009688;">
+      Current iteration: {{coreService.iteration}}
+    </p>
+  </div>
+</div>

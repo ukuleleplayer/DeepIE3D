@@ -1,0 +1,18 @@
+name: deep_ie_3d
+description: Web application displaying the capabilities of DeepIE3D
+version: 1.0.0
+author: Adrian Westh <mail@adrianwesth.dk> & Simon Krabbe Munck <simonkmunck@gmail.com>
+
+environment:
+  sdk: '>=2.2.0'
+
+dependencies:
+  angular: ^5.2.0
+  angular_components: ^0.12.0
+  js: ^0.6.1+1
+  tuple: ^1.0.2
+
+dev_dependencies:
+  build_runner: ^1.3.0
+  build_web_compilers: ^1.2.0
+  pedantic: ^1.5.0
