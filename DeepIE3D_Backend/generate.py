@@ -17,8 +17,8 @@ class SuperGenerator():
         '''
         g = Generator(200, 64)
         g_model = DataParallel(g)
-        g_checkpoint = load('plane_g_9600.tar' if model_type ==
-                            'Plane' else 'chair_g.tar', map_location=DEVICE)
+        g_checkpoint = load('plane_generator.tar' if model_type ==
+                            'Plane' else 'chair_generator.tar', map_location=DEVICE)
         g_model.load_state_dict(g_checkpoint["model_state_dict"])
         return g_model
 

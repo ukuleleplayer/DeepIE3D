@@ -1,6 +1,6 @@
 # Welcome to the source code of DeepIE3D!
 
-DeepIE3D is short for Deep Interactive Evolutionary 3D Modelling. As the name hints, it is a concept using deep learning combined with evolutionary principles used to evolve 3D models.
+DeepIE3D is short for Deep Interactive Evolutionary 3D Modelling. As the name hints, it is a concept using deep learning combined with evolutionary principles used to evolve 3D models. Please see the [website](https://adrianwesth.dk) for the final result/prototype!
 
 With this code in your hands, you'll be able to deploy DeepIE3D yourself, we've provided access to:
 
@@ -15,3 +15,5 @@ For the curious, here's some reading material on DeepIE etc.:
 * [Paper about deep interactive evolution](https://arxiv.org/pdf/1801.08230.pdf)
 * [Paper about the original technique used for artificially generating various artifacts (GAN)](https://arxiv.org/pdf/1406.2661.pdf)
 * [Paper about specifically generating 3D models (3D-GAN)](https://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
+
+Cheers from Adrian and Simon!
