@@ -12,6 +12,7 @@ With this code in your hands, you'll be able to deploy DeepIE3D yourself, we've 
 
 For the curious, here's some reading material on DeepIE etc.:
 
+* [The master's thesis written about DeepIE3D](https://adrianwesth.dk/DeepIE3D.pdf)
 * [Paper about deep interactive evolution](https://arxiv.org/pdf/1801.08230.pdf)
 * [Paper about the original technique used for artificially generating various artifacts (GAN)](https://arxiv.org/pdf/1406.2661.pdf)
 * [Paper about specifically generating 3D models (3D-GAN)](https://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
