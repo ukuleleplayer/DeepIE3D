@@ -3,32 +3,34 @@ import os
 import multiprocessing as mp
 import binvox_rw
 
+"""
+Script taking a data directory as commandline argument, and concurrently centers all models within.
+"""
 
-def center(b, data_path):
+def center(model_file, data_path):
 	"""
-
+    Centers a voxel 3D model in the y- and x axis.
 	"""
-    if b.endswith(".binvox"):
-        with open(f'{data_path}/{b}', 'rb') as f:
+    if model_file.endswith(".binvox"):
+        with open(f'{data_path}/{model_file}', 'rb') as f:
             try:
-                print(f'File: {b}')
-                m = binvox_rw.read_as_3d_array(f)
-                m.data = binvox_rw.dense_to_sparse(m.data)
-                if len(m.data[0]) != 0 and len(m.data[0]) != 0 and len(m.data[0]) != 0:
+                print(f'File: {model_file}')
+                model = binvox_rw.read_as_3d_array(f)
+                model.data = binvox_rw.dense_to_sparse(model.data)
+                if len(model.data[0]) != 0 and len(model.data[0]) != 0 and len(model.data[0]) != 0:
                     translate_x = (
-                        m.dims[0] - max(m.data[0]) - min(m.data[0]))//2
+                        model.dims[0] - max(model.data[0]) - min(model.data[0]))//2
                     translate_y = (
-                        m.dims[2] - max(m.data[2]) - min(m.data[2]))//2
+                        m.dims[2] - max(model.data[2]) - min(model.data[2]))//2
                     for n in range(len(m.data[0])):
-                        m.data[0][n] += translate_x
-                        m.data[2][n] += translate_y
-                m.write(f'{data_path}/{b}')
+                        model.data[0][n] += translate_x
+                        model.data[2][n] += translate_y
+                m.write(f'{data_path}/{model_file}')
             except:
-                print(f'Could not center file: {b}')
+                print(f'Could not center file: {model_file}')
 
 
 pool = mp.Pool(processes=mp.cpu_count())
-
-dp = f'data/{sys.argv[1]}'
-temp = [pool.apply_async(center, args=(b, dp)) for b in os.listdir(dp)]
+data_path = sys.argv[1]
+temp = [pool.apply_async(center, args=(model_file, data_path)) for model_file in os.listdir(data_path)]
 [p.get() for p in temp]
