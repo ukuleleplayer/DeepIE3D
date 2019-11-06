@@ -4,4 +4,4 @@ Frontend capable of displaying 3D models made with DeepIE3D. Connected to the ba
 
 The source code is ready to be transpiled into JavaScript - the only thing to change is the URL to the backend in [http_service.dart](lib/services/http_service.dart).
 
-To get a deployable version: `webdev build --output:build` from this folder.
+To get a deployable version: `webdev build --output web:build` from this folder.
