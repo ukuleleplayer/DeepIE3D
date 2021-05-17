@@ -1,6 +1,6 @@
 # Welcome to the source code of DeepIE3D!
 
-DeepIE3D is short for Deep Interactive Evolutionary 3D Modelling. As the name hints, it is a concept using deep learning combined with evolutionary principles used to evolve 3D models. Please see the [website](https://adrianwesth.dk) for the final result/prototype! Please see [the proof of concept video](https://www.youtube.com/watch?v=qYwVxKVQZmE) for a step-by-step guide on easy 3D printing with DeepIE3D.
+DeepIE3D is short for Deep Interactive Evolutionary 3D Modelling. As the name hints, it is a concept using deep learning combined with evolutionary principles used to evolve 3D models. Please see the [website](https://adrianwesth.dk) (unfortunately no longer hosted here, host it yourself to see it in action!) for the final result/prototype! Please see [the proof of concept video](https://www.youtube.com/watch?v=qYwVxKVQZmE) for a step-by-step guide on easy 3D printing with DeepIE3D.
 
 With this code in your hands, you'll be able to deploy DeepIE3D yourself, we've provided access to:
 
